@@ -73,6 +73,7 @@ export const Gallery: React.FC = () => {
               onClick={() => setSelectedImage(image.url)}
             >
               <img
+                loading="lazy"
                 src={image.url}
                 onError={(e) => { e.currentTarget.src = image.fallback; }}
                 alt={image.title}
